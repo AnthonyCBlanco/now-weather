@@ -15,26 +15,62 @@
 <body>
         <header class="fst-italic position-relative ">
             <h1 class="title position-absolute bottom-50">Get Your Weather Now</h1>
+            
         </header>
-        <section class="d-flex">
-            <div id="current-day" class="text-center">
+        <section class="row text-center">
+            <div id="current-day" class="text-center col-12">
                 <h2 id="city">New York</h2>
                 <h3 id="dayofweek">Monday</h3>
-                <h5 id="weather" class="d-flex justify-content-evenly">
-                    <p id="temp">75*</p>
-                    <p id="cast">Cloudy</p>
-                    <p id="rain">5%</p>
+                <h5 id="weather" class="d-flex justify-content-center">
+                    <p id="temp" class="m-1">75*</p>
+                    <p id="cast" class="m-1">Cloudy</p>
+                    <p id="rain" class="m-1">5%</p>
+                    <p id="wind" class="m-1">50mph</p>
                 </h5>
             </div>
-            <div id="future4day">
+            <div id="future2day" class="col-3 card">
                 <h3 id="dayofweek">Tuesday</h3>
-                <h5 id="Weather"></h5>
-            </div>
-            <div id="history">
-
-            </div>  
+                <h5 id="weather" class="d-flex justify-content-center">
+                    <p id="temp" class="m-1">75*</p>
+                    <p id="cast" class="m-1">Cloudy</p>
+                    <p id="rain" class="m-1">5%</p>
+                    <p id="wind" class="m-1">50mph</p>
+                </h5>            </div>
+            <div id="future3day" class="col-3 card">
+                <h3 id="dayofweek">Tuesday</h3>
+                <h5 id="weather" class="d-flex justify-content-center">
+                    <p id="temp" class="m-1">75*</p>
+                    <p id="cast" class="m-1">Cloudy</p>
+                    <p id="rain" class="m-1">5%</p>
+                    <p id="wind" class="m-1">50mph</p>
+                </h5>            </div>
+            <div id="future4day" class="col-3 card">
+                <h3 id="dayofweek">Tuesday</h3>
+                <h5 id="weather" class="d-flex justify-content-center">
+                    <p id="temp" class="m-1">75*</p>
+                    <p id="cast" class="m-1">Cloudy</p>
+                    <p id="rain" class="m-1">5%</p>
+                    <p id="wind" class="m-1">50mph</p>
+                </h5>            </div>
+            <div id="future5day" class="col-3 card">
+                <h3 id="dayofweek">Tuesday</h3>
+                <h5 id="weather" class="d-flex justify-content-center">
+                    <p id="temp" class="m-1">75*</p>
+                    <p id="cast" class="m-1">Cloudy</p>
+                    <p id="rain" class="m-1">5%</p>
+                    <p id="wind" class="m-1">50mph</p>
+                </h5>            </div>
+            </section>
+            <section class="text-center m-5">
+                <div id="search" class="m-3">
+                    <input type="text" class="h-50" placeholder="New York">
+                    <button type="button" class="btn btn-primary">Search</button>
+                </div>
+                <div id="history" class="text-center">
+                    <h3>Recent Searches</h3>
+                </div>  
+            </section>
             
-        </section>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
