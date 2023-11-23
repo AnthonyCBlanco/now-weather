@@ -1,0 +1,16 @@
+:root{
+    --skyblue: #0d6efd
+}
+
+header{
+    height:30vh;
+    font-weight: lighter;
+    color: white;
+    background-color: var(--skyblue);
+}
+
+.title{
+    font-size: 75px;
+    padding-left: 15%;
+}
+
