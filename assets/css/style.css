@@ -11,6 +11,10 @@ header{
 
 .title{
     font-size: 75px;
-    padding-left: 15%;
+    padding-left: 5%;
 }
 
+.card{
+    height: 150px;
+    border: 0;
+}

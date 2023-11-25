@@ -21,7 +21,7 @@
             <div id="current-day" class="text-center col-12">
                 <h2 id="city">New York</h2>
                 <h3 id="dayofweek">Monday</h3>
-                <h5 id="weather" class="d-flex justify-content-center">
+                <h5 id="weather" class="d-flex justify-content-center flex-column">
                     <p id="temp" class="m-1">75*</p>
                     <p id="cast" class="m-1">Cloudy</p>
                     <p id="rain" class="m-1">5%</p>
@@ -30,7 +30,7 @@
             </div>
             <div id="future2day" class="col-3 card">
                 <h3 id="dayofweek">Tuesday</h3>
-                <h5 id="weather" class="d-flex justify-content-center">
+                <h5 id="weather" class="d-flex justify-content-center flex-column">
                     <p id="temp" class="m-1">75*</p>
                     <p id="cast" class="m-1">Cloudy</p>
                     <p id="rain" class="m-1">5%</p>
@@ -38,7 +38,7 @@
                 </h5>            </div>
             <div id="future3day" class="col-3 card">
                 <h3 id="dayofweek">Tuesday</h3>
-                <h5 id="weather" class="d-flex justify-content-center">
+                <h5 id="weather" class="d-flex justify-content-center flex-column">
                     <p id="temp" class="m-1">75*</p>
                     <p id="cast" class="m-1">Cloudy</p>
                     <p id="rain" class="m-1">5%</p>
@@ -46,7 +46,7 @@
                 </h5>            </div>
             <div id="future4day" class="col-3 card">
                 <h3 id="dayofweek">Tuesday</h3>
-                <h5 id="weather" class="d-flex justify-content-center">
+                <h5 id="weather" class="d-flex justify-content-center flex-column">
                     <p id="temp" class="m-1">75*</p>
                     <p id="cast" class="m-1">Cloudy</p>
                     <p id="rain" class="m-1">5%</p>
@@ -54,7 +54,7 @@
                 </h5>            </div>
             <div id="future5day" class="col-3 card">
                 <h3 id="dayofweek">Tuesday</h3>
-                <h5 id="weather" class="d-flex justify-content-center">
+                <h5 id="weather" class="d-flex justify-content-center flex-column">
                     <p id="temp" class="m-1">75*</p>
                     <p id="cast" class="m-1">Cloudy</p>
                     <p id="rain" class="m-1">5%</p>
@@ -63,8 +63,9 @@
             </section>
             <section class="text-center m-5">
                 <div id="search" class="m-3">
-                    <input type="text" class="h-50" placeholder="New York">
-                    <button type="button" class="btn btn-primary">Search</button>
+                    <p>Search For A City</p> 
+                    <input type="text" class="h-50" placeholder="New York" id="searchInput">
+                    <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
                 </div>
                 <div id="history" class="text-center">
                     <h3>Recent Searches</h3>
