@@ -18,3 +18,8 @@ header{
     height: 150px;
     border: 0;
 }
+
+img{
+    align-self: center;
+    max-width: 50px;
+}
