@@ -8,7 +8,7 @@ var recentcitiesArr;
 searchBtn.addEventListener('click', function(){
     city = searchInput.value
     console.log(city)
-    weatherURL ="http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial"; 
+    weatherURL ="https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial"; 
     fetchweather()
     handleLocalStorage()
     getHistory()
@@ -77,7 +77,7 @@ function getHistory(){
         ulElement.appendChild(liElement);
         liElement.addEventListener('click', function(){
             city = liElement.textContent
-            weatherURL ="http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial";
+            weatherURL ="https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial";
             fetchweather()
         })
     };
