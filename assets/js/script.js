@@ -1,10 +1,9 @@
 var APIkey = "73761c0b9996cb9b9d5264d11876f11a"
-var city = 'Loma Linda'
+var city;
 var searchInput = document.querySelector("#searchInput")
 var searchBtn =document.querySelector(("#searchBtn"))
 var weatherURL;
-// window.onload = getHistory()
-var recentcitiesArr = []
+var recentcitiesArr;
 
 searchBtn.addEventListener('click', function(){
     city = searchInput.value
@@ -12,6 +11,7 @@ searchBtn.addEventListener('click', function(){
     weatherURL ="http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial"; 
     fetchweather()
     handleLocalStorage()
+    getHistory()
 })
 
 function fetchweather(){
@@ -62,15 +62,27 @@ function fetchweather(){
 
 function handleLocalStorage(){
     recentcitiesArr = JSON.parse(localStorage.getItem('recentcities')) || [];
+    if(!city){console.log('please enter a city'); return}
     recentcitiesArr.push(city)
     localStorage.setItem('recentcities', JSON.stringify(recentcitiesArr))
 }
 
 function getHistory(){
-    for(var i = 0; i < recentcitiesArr.length; i++){
-        var li = document.createElement('li')
-        li.textContent = recentcitiesArr[i]
-        historyEl.append(li)
+    console.log(recentcitiesArr.length)
+    const listContainer = document.querySelector('#history');
+    const ulElement = document.createElement('ul');
+    for(var i = 0; i < 5; i++){
+        const liElement = document.createElement('li');
+        liElement.textContent = recentcitiesArr[i];
+        ulElement.appendChild(liElement);
+        liElement.addEventListener('click', function(){
+            city = liElement.textContent
+            weatherURL ="http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey + "&units=imperial";
+            fetchweather()
+        })
+    };
+    listContainer.appendChild(ulElement);
     }
-}
+
+
 
